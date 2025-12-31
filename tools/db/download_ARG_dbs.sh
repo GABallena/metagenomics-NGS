@@ -4,6 +4,11 @@
 # ==========================
 # Requires: aria2c, unzip/tar
 
+set -euo pipefail
+
+DB_ROOT="${DB_ROOT:-db/downloads/amr}"
+mkdir -p "$DB_ROOT"
+
 # Create a directory
 mkdir -p ARG_DBs && cd ARG_DBs
 

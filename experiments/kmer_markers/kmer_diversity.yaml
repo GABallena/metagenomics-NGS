@@ -1,0 +1,41 @@
+# Configuration file for k-mer deduplication
+
+# Input/Output settings
+io:
+  input_file: "input_sequences.fasta"
+  output_file: "deduplicated_kmers.fasta"
+  format: "fasta"  # supported: fasta, fastq
+
+# K-mer settings
+kmer:
+  length: 31  # k-mer length
+  quality_threshold: 20  # minimum base quality score
+  min_gc: 0.2  # minimum GC content
+  max_gc: 0.8  # maximum GC content
+  min_count: 2  # minimum occurrence threshold
+  max_count: 1000000  # maximum occurrence threshold
+  strand_specific: false  # consider both strands
+  canonical: true  # use canonical k-mers only
+  skip_n: true  # skip k-mers containing N bases
+  min_count: 2  # minimum occurrence threshold
+  max_count: 1000000  # maximum occurrence threshold
+  strand_specific: false  # consider both strands
+
+# Processing settings
+processing:
+  threads: 4  # number of parallel threads
+  batch_size: 1000000  # number of sequences per batch
+  memory_limit: "8GB"  # maximum memory usage
+
+# Output options
+output:
+  compress: true  # gzip output
+  include_counts: true  # include k-mer counts in output
+  file_prefix: "dedup_"
+
+# Logging settings
+logging:
+  level: "info"
+  file: "kmer_dedup.log"
+  max_size: "100MB"
+  max_backups: 3
