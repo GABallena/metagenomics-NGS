@@ -1,0 +1,31 @@
+# outputs/data
+raw_reads/
+trimmed_reads/
+contigs/
+assemblies/
+bins/
+results/
+qc/
+logs/
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.sam
+*.cram
+*.bai
+*.fasta
+*.fa
+*.fna
+*.zip
+*.tar.gz
+
+# secrets
+*.env
+config/*secret*
+config/*private*
+
+# editor
+.vscode/
+.DS_Store

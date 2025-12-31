@@ -1,0 +1,29 @@
+sample: demo_sample
+
+r1: raw_reads/demo_sample_R1.fq.gz
+r2: raw_reads/demo_sample_R2.fq.gz
+outdir: .
+kraken_db: Kraken/k2_db
+
+dirs:
+  raw_reads: raw_reads
+  trimmed: trimmed_reads
+  fastqc: fastqc_output
+  kraken: Kraken/kraken_output
+  bracken: Kraken/bracken_output
+  results: aggregated_results
+  logs: logs
+
+params:
+  trim:
+    adapters: adapters.fasta
+    slidingwindow: "4:15"
+    leading: 3
+    trailing: 3
+    minlen: 36
+
+threads:
+  trim: 16
+  fastqc: 8
+  kraken: 16
+  diversity: 16

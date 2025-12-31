@@ -1,0 +1,11 @@
+samples:
+  - sampleA
+  - sampleB
+
+sequences_dir: sequences
+alignments_dir: alignments
+trees_dir: trees
+
+threads:
+  alignment: 4
+  tree: 4

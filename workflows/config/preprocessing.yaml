@@ -1,0 +1,11 @@
+samples:
+  - sampleA
+  - sampleB
+
+raw_reads_dir: raw_reads
+trimmed_reads_dir: trimmed_reads
+qc_dir: qc
+
+threads:
+  trimming: 4
+  qc: 2
